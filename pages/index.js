@@ -21,7 +21,7 @@ export default function Home() {
               <Image
                 src={profilePic}
                 alt="Kévin Forget"
-                className="w-full h-auto"
+                className="w-full h-auto rounded-full"
               />
             </div>
             <div className="w-1/2 flex flex-col items-center self-center">
@@ -53,7 +53,7 @@ export default function Home() {
           </div>
         </Layout>
         <HireMe />
-        <div className="absolute right-8 bottom-8 inline-block w-36">
+        <div className="absolute right-8  bottom-8 inline-block w-36">
           <AmpuleIcon />
         </div>
       </main>
