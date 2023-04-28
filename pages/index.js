@@ -4,9 +4,8 @@ import Image from "next/image"
 import profilePic from "../public/assets/profilePic.png"
 import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
-import { LinkArrow } from "@/components/Icons";
+import { AmpuleIcon, LinkArrow } from "@/components/Icons";
 import HireMe from "@/components/HireMe";
-import lightBulb from "../public/assets/idea.png";
 
 export default function Home() {
   return (
@@ -55,7 +54,7 @@ export default function Home() {
         </Layout>
         <HireMe />
         <div className="absolute right-8 bottom-8 inline-block w-36">
-          <Image src={lightBulb} alt="Ampule" className="w-full h-auto" />
+          <AmpuleIcon />
         </div>
       </main>
     </>
