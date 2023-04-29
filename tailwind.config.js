@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
+const { transform } = require('framer-motion');
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
 module.exports = {
@@ -24,7 +25,7 @@ module.exports = {
       },
       backgroundImage:{
         circularLight: 'repeating-radial-gradient(rgba(0,0,0,0.4) 2px, #f5f5f5 5px, #f5f5f5 100px);'
-      }
+      },
     },
   },
   plugins: [],

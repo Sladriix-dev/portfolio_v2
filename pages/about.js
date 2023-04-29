@@ -37,7 +37,7 @@ const about = () => {
   return (
     <>
       <Head>
-        <title>Kévin Forget | Qui suis-je ?</title>
+        <title>KF - Qui suis-je ?</title>
         <meta
           name="description"
           content="This page explains who I am and traces my professional background"
