@@ -6,30 +6,32 @@ import React, { useEffect, useRef } from "react";
 import profilePic from "../public/assets/profilePic2.jpg";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
+import Education from "@/components/Education";
 
-const AnimatedNumbers = ({value}) => {
-    const ref = useRef(null)
+const AnimatedNumbers = ({ value }) => {
+  const ref = useRef(null);
 
-    const motionValue = useMotionValue(0);
-    const springValue = useSpring(motionValue, { duration: 3000 });
-    const isInView = useInView(ref, {once: true});
+  const motionValue = useMotionValue(0);
+  const springValue = useSpring(motionValue, { duration: 3000 });
+  const isInView = useInView(ref, { once: true });
 
-    useEffect(() => {
-        if(isInView) {
-            motionValue.set(value);
-        }
-    }, [isInView, value, motionValue])
+  useEffect(() => {
+    if (isInView) {
+      motionValue.set(value);
+    }
+  }, [isInView, value, motionValue]);
 
-    useEffect(() => {
-        springValue.on("change", (latest) => {
-            if(ref.current && latest.toFixed(0) <= value) {
-                ref.current.textContent = latest.toFixed(0)
-            }
-        })
-    }, [springValue, value])
+  useEffect(() => {
+    springValue.on("change", (latest) => {
+      if (ref.current && latest.toFixed(0) <= value) {
+        ref.current.textContent = latest.toFixed(0);
+      }
+    });
+  }, [springValue, value]);
 
-    return <span ref={ref}></span>
-}
+  return <span ref={ref}></span>;
+};
 
 const about = () => {
   return (
@@ -81,7 +83,7 @@ const about = () => {
             <div className="col-span-2 flex flex-col items-end justify-between h-[80%]">
               <div className="flex flex-col items-end justify-center">
                 <span className="inline-block text-7xl font-bold">
-                    +<AnimatedNumbers value={15} />
+                  +<AnimatedNumbers value={15} />
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75">
                   clients satisfaits
@@ -89,7 +91,7 @@ const about = () => {
               </div>
               <div className="flex flex-col items-end justify-center">
                 <span className="inline-block text-7xl font-bold">
-                    +<AnimatedNumbers value={30} />
+                  +<AnimatedNumbers value={30} />
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75">
                   projets terminés
@@ -97,7 +99,7 @@ const about = () => {
               </div>
               <div className="flex flex-col items-end justify-center">
                 <span className="inline-block text-7xl font-bold">
-                    +<AnimatedNumbers value={2} />
+                  +<AnimatedNumbers value={2} />
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75">
                   années d'expérience
@@ -106,6 +108,8 @@ const about = () => {
             </div>
           </div>
           <Skills />
+          <Experience />
+          <Education />
         </Layout>
       </main>
     </>
