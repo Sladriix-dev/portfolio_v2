@@ -110,7 +110,7 @@ const projects = () => {
             <div className="col-span-12">
               <FeaturedProject
                 title="My-Blog"
-                summary="Ce projet respecte l'environnement de TypeScript avec une configuration NextJS MongoDB et Prisma connect. Concernant l'authentification j'ai utilisé NextAuth, une authentification via Google ou Github est également disponible. Les pages sont entièrement responsive.Une authentification basé sur les cookies est également présente. Des effets et des animations détaillés sont présents grâce à TailwindCSS. Pour fetch l'ensemble des datas, je me suis servis de react swr et zustand pour la gestion du state"
+                summary="Ce projet React utilise Firestore pour le développement du serveur ainsi que Firebase pour l'authentification par email. Le blog est entièrement responsif et il se sert de Sass pour l'ensemble de son style."
                 videoId="LVH5lFDsjOY"
                 github="https://github.com/Sladriix-dev/my-blog"
                 type="ReactJS"
