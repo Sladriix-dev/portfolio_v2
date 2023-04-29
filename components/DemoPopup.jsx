@@ -48,7 +48,7 @@ const DemoPopup = ({ videoId }) => {
     return (
       <>
         <motion.div
-          className="fixed top-0 left-0 w-full h-full bg-zinc-700 flex justify-center items-center bg-opacity-80 backdrop-blur-sm"
+          className="fixed top-0 left-0 w-full h-full bg-zinc-700 flex justify-center items-center bg-opacity-80 backdrop-blur-sm z-50"
           variants={Popup}
           initial="initial"
           animate="animate"
