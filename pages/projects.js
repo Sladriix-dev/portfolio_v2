@@ -12,13 +12,22 @@ import pacmanImage from "../public/assets/pacman.png";
 import ecommerceImage from "../public/assets/ecommerce.png";
 import dashboardImage from "../public/assets/dashboard.png";
 import DemoPopup from "@/components/DemoPopup";
+import { motion } from "framer-motion";
+
+const FramerImage = motion(Image);
 
 const FeaturedProject = ({ type, title, summary, videoId, img, github }) => {
   return (
     <article className="w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 relative rounded-br-2xl">
       <div className="absolute top-0 -right-3 -z-10 w-[100%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl" />
       <div className="w-1/2 overflow-hidden rounded-lg">
-        <Image src={img} alt={title} className="w-full h-auto" />
+        <FramerImage
+          src={img}
+          alt={title}
+          className="w-full h-auto"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.2 }}
+        />
       </div>
       <div className="w-1/2 h-full flex flex-col items-start justify-between pl-6">
         <span className="text-blue-700 font-medium text-xl">{type}</span>
@@ -42,7 +51,13 @@ const Project = ({ title, type, img, videoId, github }) => {
     <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative">
       <div className="absolute top-0 -right-3 -z-10 w-[100%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl" />
       <div className="w-full overflow-hidden rounded-lg">
-        <Image src={img} alt={title} className="w-full h-auto" />
+        <FramerImage
+          src={img}
+          alt={title}
+          className="w-full h-auto"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.2 }}
+        />
       </div>
       <div className="w-full h-full flex flex-col items-start justify-between mt-4">
         <span className="text-blue-700 font-medium text-xl">{type}</span>
