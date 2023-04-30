@@ -82,7 +82,7 @@ const NavBar = () => {
         <button
           onClick={() => setMode(mode === "light" ? "dark" : "light")}
           className={`
-            ml-3 
+            ml-8 
             flex 
             items-center 
             justify-center 
