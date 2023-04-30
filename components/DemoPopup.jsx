@@ -37,7 +37,7 @@ const DemoPopup = ({ videoId }) => {
     return (
       <div>
         <button
-          className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold"
+          className="ml-4 rounded-lg bg-dark dark:bg-light text-light dark:text-dark p-2 px-6 text-lg font-semibold border border-solid border-transparent hover:dark:border-light hover:dark:text-light hover:dark:bg-dark hover:border-dark hover:bg-light hover:text-dark"
           onClick={() => handleOpenPopup()}
         >
           Voir la démo

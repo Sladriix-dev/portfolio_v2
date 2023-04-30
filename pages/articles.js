@@ -17,7 +17,7 @@ const FramerImage = motion(Image);
 
 const FeaturedArticle = ({ img, title, time, summary, link }) => {
   return (
-    <li className="col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl relative">
+    <li className="col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl relative dark:border-light dark:bg-dark">
       <div className="absolute top-0 -right-3 -z-10 w-[100%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl" />
       <Link
         href={link}
@@ -38,7 +38,7 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
         </h2>
       </Link>
       <p className="text-sm mb-2">{summary}</p>
-      <span className="text-blue-700 font-semibold">{time}</span>
+      <span className="text-blue-700 dark:text-primaryDark font-semibold">{time}</span>
     </li>
   );
 };
@@ -61,8 +61,8 @@ const MovingImg = ({ title, img, link }) => {
   }
 
   return (
-    <Link 
-      href={link} 
+    <Link
+      href={link}
       target="_blank"
       onMouseMove={handleMouse}
       onMouseLeave={handleMouseLeave}
@@ -70,14 +70,14 @@ const MovingImg = ({ title, img, link }) => {
       <h2 className="capitalize text-xl font-semibold hover:underline">
         {title}
       </h2>
-      <FramerImage 
-        ref={imgRef} 
-        src={img} 
-        alt={title} 
+      <FramerImage
+        ref={imgRef}
+        src={img}
+        alt={title}
         className="z-10 w-96 h-auto hidden absolute rounded-lg"
-        style={{ x:x, y:y }}
-        initial={{opacity: 0}}
-        whileInView={{opacity:1, transition:{duration: 0.2}}}
+        style={{ x: x, y: y }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, transition: { duration: 0.2 } }}
       />
     </Link>
   );
@@ -85,14 +85,14 @@ const MovingImg = ({ title, img, link }) => {
 
 const Article = ({ img, title, date, link }) => {
   return (
-    <motion.li 
-      className="relative w-full p-4 py-6 my-8 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4"
-      initial={{y:200}}
-      whileInView={{y:0, transition:{duration: 0.5, ease:"easeInOut"}}}
-      viewport={{one: true}}
+    <motion.li
+      className="relative w-full p-4 py-6 my-8 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4 dark:border-light dark:bg-dark dark:text-light"
+      initial={{ y: 200 }}
+      whileInView={{ y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
+      viewport={{ one: true }}
     >
       <MovingImg title={title} img={img} link={link} />
-      <span className="text-blue-700 font-semibold pl-4">{date}</span>
+      <span className="text-blue-700 dark:text-primaryDark font-semibold pl-4">{date}</span>
     </motion.li>
   );
 };
@@ -107,7 +107,7 @@ const articles = () => {
           content="This page explains who I am and traces my professional background"
         />
       </Head>
-      <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden">
+      <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
             text="Les mots peuvent changer le monde"

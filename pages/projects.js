@@ -18,8 +18,8 @@ const FramerImage = motion(Image);
 
 const FeaturedProject = ({ type, title, summary, videoId, img, github }) => {
   return (
-    <article className="w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 relative rounded-br-2xl">
-      <div className="absolute top-0 -right-3 -z-10 w-[100%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl" />
+    <article className="w-full flex items-center justify-between rounded-3xl border border-solid border-dark dark:border-light bg-light dark:bg-dark shadow-2xl p-12 relative rounded-br-2xl">
+      <div className="absolute top-0 -right-3 -z-10 w-[100%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl dark:bg-light" />
       <div className="w-1/2 overflow-hidden rounded-lg">
         <FramerImage
           src={img}
@@ -30,11 +30,13 @@ const FeaturedProject = ({ type, title, summary, videoId, img, github }) => {
         />
       </div>
       <div className="w-1/2 h-full flex flex-col items-start justify-between pl-6">
-        <span className="text-blue-700 font-medium text-xl">{type}</span>
-        <h2 className="my-2 w-full text-left text-4xl font-bold hover:underline underline-offset-2">
+        <span className="text-blue-700 dark:text-primaryDark font-medium text-xl">
+          {type}
+        </span>
+        <h2 className="my-2 w-full text-left text-4xl font-bold hover:underline underline-offset-2 dark:text-light">
           {title}
         </h2>
-        <p className="my-2 font-medium text-dark">{summary}</p>
+        <p className="my-2 font-medium text-dark dark:text-light">{summary}</p>
         <div className="mt-2 flex items-center">
           <Link href={github} target="_blank" className="w-10">
             <GithubIcon />
@@ -48,8 +50,8 @@ const FeaturedProject = ({ type, title, summary, videoId, img, github }) => {
 
 const Project = ({ title, type, img, videoId, github }) => {
   return (
-    <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative">
-      <div className="absolute top-0 -right-3 -z-10 w-[100%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl" />
+    <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative dark:bg-dark dark:border-light">
+      <div className="absolute top-0 -right-3 -z-10 w-[100%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light" />
       <div className="w-full overflow-hidden rounded-lg">
         <FramerImage
           src={img}
@@ -60,7 +62,7 @@ const Project = ({ title, type, img, videoId, github }) => {
         />
       </div>
       <div className="w-full h-full flex flex-col items-start justify-between mt-4">
-        <span className="text-blue-700 font-medium text-xl">{type}</span>
+        <span className="text-blue-700 dark:text-primaryDark font-medium text-xl">{type}</span>
         <h2 className="my-2 w-full text-left text-3xl font-bold hover:underline underline-offset-2">
           {title}
         </h2>
@@ -85,7 +87,7 @@ const projects = () => {
           content="In this page you can learn more about my skills by going through all of my projects"
         />
       </Head>
-      <main className="w-full mb-16 flex flex-col items-center justify-center">
+      <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
             text="L'imagination l'emporte sur la connaissance"
