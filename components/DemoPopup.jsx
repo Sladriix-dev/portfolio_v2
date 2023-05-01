@@ -71,7 +71,7 @@ const DemoPopup = ({ videoId, autoPlay }) => {
         <motion.div
           initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
           animate={{ scale: 1, opacity: 1 }}
-          className="w-[102%] h-full flex flex-col z-30 items-center justify-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32"
+          className="w-[102%] h-[102%] flex flex-col z-50 items-center justify-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32"
         >
           <button
             className="fixed top-8 left-8 font-bold bg-transparent border-none text-base cursor-pointer"

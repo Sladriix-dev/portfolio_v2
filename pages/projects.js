@@ -108,7 +108,7 @@ const projects = () => {
                 img={netflixImage}
               />
             </div>
-            <div className="col-span-6">
+            <div className="col-span-6 sm:col-span-12">
               <Project
                 title="Landing Page"
                 videoId="muZTLTU-lnU"
@@ -117,7 +117,7 @@ const projects = () => {
                 img={landingPageImage}
               />
             </div>
-            <div className="col-span-6">
+            <div className="col-span-6 sm:col-span-12">
               <Project
                 title="Pac-man"
                 videoId="nDaDp819ZRY"
@@ -127,7 +127,7 @@ const projects = () => {
               />
             </div>
           </div>
-          <div className="grid grid-cols-12 gap-24">
+          <div className="grid grid-cols-12 gap-24 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject
                 title="My-Blog"
@@ -138,7 +138,7 @@ const projects = () => {
                 img={myBlogImage}
               />
             </div>
-            <div className="col-span-6">
+            <div className="col-span-6 sm:col-span-12">
               <Project
                 title="Site e-commerce"
                 videoId="06FLWzE_MfU"
@@ -147,7 +147,7 @@ const projects = () => {
                 img={ecommerceImage}
               />
             </div>
-            <div className="col-span-6">
+            <div className="col-span-6 sm:col-span-12">
               <Project
                 title="Dashboard"
                 videoId="06FLWzE_MfU"
