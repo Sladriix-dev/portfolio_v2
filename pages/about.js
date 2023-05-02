@@ -8,12 +8,13 @@ import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
+import TransitionEffect from "@/components/TransitionEffect";
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
 
   const motionValue = useMotionValue(0);
-  const springValue = useSpring(motionValue, { duration: 3000 });
+  const springValue = useSpring(motionValue, { duration: 3000, delay: 0.8 });
   const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
@@ -43,6 +44,7 @@ const about = () => {
           content="This page explains who I am and traces my professional background"
         />
       </Head>
+      <TransitionEffect />
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
@@ -59,21 +61,21 @@ const about = () => {
               <p className="font-medium text-lg">
                 Bonjour, je suis Kévin, un développeur front-end passionné par
                 la création de sites beaux, fonctionnels, et des expériences
-                numériques centrées sur l'utilisateur. Avec 2 ans d'expérience
+                numériques centrées sur l&apos;utilisateur. Avec 2 ans d&apos;expérience
                 dans le domaine. je cherche toujours des façons nouvelles et
                 novatrices de donner vie aux visions de mes clients.
               </p>
               <p className="my-4 font-medium text-lg">
                 Je crois que le design ne consiste pas seulement à rendre les
-                choses jolies - il s'agit de résoudre des problèmes et créer des
+                choses jolies - il s&apos;agit de résoudre des problèmes et créer des
                 expériences intuitives et agréables pour les utilisateurs.
               </p>
               <p className="font-medium text-lg">
                 Que je travaille sur un site Web, une application mobile ou
-                autre produit numérique, j'apporte mon engagement envers
-                l'excellence du design et la pensée centrée sur l'utilisateur à
-                chaque projet sur lequel je travaille. J'attends avec impatience
-                l'occasion d'apporter mes compétences et ma passion à votre
+                autre produit numérique, j&apos;apporte mon engagement envers
+                l&apos;excellence du design et la pensée centrée sur l&apos;utilisateur à
+                chaque projet sur lequel je travaille. J&apos;attends avec impatience
+                l&apos;occasion d&apos;apporter mes compétences et ma passion à votre
                 prochain projet.
               </p>
             </div>
@@ -115,7 +117,7 @@ const about = () => {
                   +<AnimatedNumbers value={2} />
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  années d'expérience
+                  années d&apos;expérience
                 </h2>
               </div>
             </div>

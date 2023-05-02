@@ -12,6 +12,7 @@ import sophrologieImage from "../public/assets/sophrologie.jpg";
 import meditationImage from "../public/assets/meditation.jpg";
 import cleanImage from "../public/assets/clean.png";
 import { motion, useMotionValue } from "framer-motion";
+import TransitionEffect from "@/components/TransitionEffect";
 
 const FramerImage = motion(Image);
 
@@ -113,6 +114,7 @@ const articles = () => {
           content="This page explains who I am and traces my professional background"
         />
       </Head>
+      <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light">
         <Layout className="pt-16">
           <AnimatedText

@@ -36,6 +36,7 @@ const AnimatedText = ({ text, className = "" }) => {
         variants={quote}
         initial="initial"
         animate="animate"
+        delay="0.8"
       >
         {text.split(" ").map((word, index) => (
           <motion.span
