@@ -7,14 +7,14 @@ export default function Document() {
       <Head>
         <Script
           strategy="layOnload"
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS}`}
+          src={`https://www.googletagmanager.com/gtag/js?id=G-0BD5WQFWQJ`}
         />
         <Script id="ga-script" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${process.env.GOOGLE_ANALYTICS}', {
+            gtag('config', 'G-0BD5WQFWQJ', {
               page_path: window.location.pathname,
             });
           `}
