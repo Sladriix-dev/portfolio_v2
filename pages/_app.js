@@ -5,6 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import { Montserrat } from "next/font/google";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Script from "next/script";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -19,6 +20,17 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-0BD5WQFWQJ"
+      >
+        {`
+          window.dataLayer = window.dataLayer || []; 
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date()); 
+          gtag('config', 'G-0BD5WQFWQJ');
+        `}
+      </Script>
       <main
         className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full min-h-screen`}
       >
