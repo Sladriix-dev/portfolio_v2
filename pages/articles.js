@@ -108,7 +108,7 @@ const articles = () => {
   return (
     <>
       <Head>
-        <title>KF - Articles test</title>
+        <title>KF - Articles</title>
         <meta
           name="description"
           content="This page explains who I am and traces my professional background"
